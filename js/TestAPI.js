@@ -2,13 +2,13 @@
 
 //DANIELA'S NOTE: This part of the code allows you to get access to the API and get JSON files
 const client = contentful.createClient({
-  space: '9ibhbvc9100k', // 1. add space id as a string get it from WebApp
-  accessToken: 's5fVSTk-C4DPzuDb6P2YwCWTg31Iaz9pjoRLvlG5hR4' //2. add accessToken as a string get it from WebApp
+  space:'' , // 1. add space id as a string get it from WebApp
+  accessToken: '' //2. add accessToken as a string get it from WebApp
 })
 
 //DANIELAS NOTE: Here we are getting JSON from Content Managment API
 client
-  .getEntry('7r1rA6QmtKZLvJ1Q8VDe9D')//3. get entry from WebApp and add it as string 
+  .getEntry('')//3. get entry from WebApp and add it as string 
   .then(function (entry) {
       // logs the entry metadata
       console.log(entry.sys)
@@ -21,7 +21,7 @@ client
 
 //DANIELAS NOTE: Here we are getting JSON from Images Delivery API
 client
-  .getAsset("Rs6by3UMs2J7mEc3YUUrX") //4. get asset from WebApp and add it as string 
+  .getAsset('') //4. get asset from WebApp and add it as string 
   .then(function (asset ){
     
     console.log(asset.fields)  
