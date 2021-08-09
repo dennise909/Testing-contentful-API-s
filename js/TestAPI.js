@@ -3,7 +3,8 @@
 //DANIELA'S NOTE: This part of the code allows you to get access to the API and get JSON files
 const client = contentful.createClient({
   space:'' , // 1. add space id as a string get it from WebApp
-  accessToken: '' //2. add accessToken as a string get it from WebApp
+  environment:'master',
+  accessToken: '' //2. add CDA accessToken as a string get it from the WebApp
 })
 
 //DANIELAS NOTE: Here we are getting JSON from Content Managment API
@@ -11,7 +12,7 @@ client
   .getEntry('')//3. get entry from WebApp and add it as string 
   .then(function (entry) {
       // logs the entry metadata
-      console.log(entry.sys)
+      console.log(entry.fields)
       fieldsData(entry.fields)
       // logs the field with ID title
    })   //console.log(entry.fields.geolocalization)
